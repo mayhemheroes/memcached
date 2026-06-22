@@ -1,0 +1,8 @@
+project: memcached
+target: fuzzer_proxy
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzzer_proxy/testsuite
+cmds:
+  - cmd: /mayhem/fuzzer_proxy
+    libfuzzer: true
